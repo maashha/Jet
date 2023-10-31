@@ -16,11 +16,10 @@ def function_3():
     files = os.listdir(dir_path)
     return files
 
-def inputs(commands):
-    for command in commands:
-        if command[0]=='1':
-            print(function_1())
-        if command[0]=='2':
-            function_2(command[2:])
-        if command[0]=='3':
-            print(*function_3())
+def inputs(command, name):
+    if command=='1':
+        print(function_1())
+    if command=='2':
+        function_2(name)
+    if command=='3':
+        print(*function_3())
